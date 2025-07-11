@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <title>Aloqa – Sohib Xolburiyev</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .contact-container {
+      max-width: 700px;
+      margin: 80px auto;
+      background: rgba(0,0,0,0.4);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    }
+    label {
+      margin-top: 10px;
+    }
+    .form-control {
+      background-color: #f8f9fa;
+    }
+    .socials a {
+      color: #00eaff;
+      margin-right: 15px;
+      font-size: 1.4rem;
+    }
+    .btn-back {
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container contact-container">
+    <h2 class="mb-4">Men bilan bog‘lanish</h2>
+
+    <form method="post">
+      {% csrf_token %}
+      <div class="mb-3">
+        <label for="name">Ismingiz</label>
+        <input type="text" class="form-control" id="name" name="name" required placeholder="Ismingiz">
+      </div>
+      <div class="mb-3">
+        <label for="email">Email manzilingiz</label>
+        <input type="email" class="form-control" id="email" name="email" required placeholder="email@example.com">
+      </div>
+      <div class="mb-3">
+        <label for="message">Xabaringiz</label>
+        <textarea class="form-control" id="message" name="message" rows="4" required placeholder="Xabaringizni yozing..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-light mt-3">Yuborish</button>
+    </form>
+
+    <hr class="my-4">
+
+    <div class="socials">
+      <p class="mb-1">Yoki quyidagilar orqali bog‘laning:</p>
+      <a href="https://t.me/TDIU_KATT" target="_blank"><i class="bi bi-telegram"></i> Telegram</a>
+      <a href="mailto:xolburiyev@gmail.com"><i class="bi bi-envelope-at"></i> Email</a>
+        <a href="https://instagram.com/Sohib_70_" target="_blank"><i class="bi bi-instagram"></i> Instagram</a>
+    </div>
+
+    <!-- Bosh sahifaga qaytish tugmasi -->
+    <div class="text-center btn-back">
+      <a href="{% url 'home' %}" class="btn btn-outline-light">
+        ← Bosh sahifaga qaytish
+      </a>
+    </div>
+  </div>
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</body>
+</html>

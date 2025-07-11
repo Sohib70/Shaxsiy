@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <title>Tarjimayi Hol – Sohib Xolburiyev</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .container {
+      padding: 60px 20px;
+    }
+    .profile-img {
+      max-width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    }
+    h1 {
+      color: #4da3ff;
+    }
+    .info-box {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      backdrop-filter: blur(6px);
+    }
+    .info-box h5 {
+      color: #66d9ef;
+      font-weight: bold;
+    }
+    .btn-back {
+      margin-top: 30px;
+    }
+    .icon {
+      margin-right: 10px;
+      color: #00d4ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <!-- Profil rasmi -->
+      <div class="col-md-5 text-center">
+       <img src="/media/images.jpg" alt="Sohib Xolbo'riyev rasmi" class="profile-img">
+        <h2 class="mt-4">Sohib Xolburiyev</h2>
+        <p>Backend Developer | Python & Django</p>
+      </div>
+
+      <!-- Tarjimayi hol qismi -->
+      <div class="col-md-7">
+        <h1 class="mb-4">Tarjimayi Hol</h1>
+
+        <div class="info-box">
+          <h5><i class="icon bi bi-calendar3"></i> Yosh:</h5>
+          <p>08.12.2003, Qashqadaryo viloyati Yakkabog‘ tumanida tug‘ilganman.</p>
+        </div>
+
+        <div class="info-box">
+          <h5><i class="icon bi bi-mortarboard"></i> Ta’lim:</h5>
+          <p>2022-yil Toshkent davlat texnika universitetiga (Energetika) yunalishiga grand asosida qabul qilinganman. Yunalishimdan qoniqmaganim
+            sabab 2023 yil qayta o'qishga topshirib Toshkent davlat iqtisodiyot universitetiga (ATT) yunalishi kechki ta'lim shakliga qabul qilinganman.</p>
+        </div>
+
+        <div class="info-box">
+          <h5><i class="icon bi bi-code-slash"></i> Kasb:</h5>
+          <p>Backend yo‘nalishida Django, Python, PostgreSQL bilan ishlayman. Frontendda esa Bootstrap va HTML/CSS’dan qisqa tushumcham bor.</p>
+        </div>
+
+        <div class="info-box">
+          <h5><i class="icon bi bi-lightbulb"></i> Qiziqishlar:</h5>
+          <p>Sun’iy intellekt, web-loyihalar,innovatsiyalar va stol tennisi.</p>
+        </div>
+
+        <div class="info-box">
+          <h5><i class="icon bi bi-people"></i> Oilaviy holat:</h5>
+          <p>Oilada 6 farzandmiz.Men kenjatoyman. Har doim o‘rganishga va rivojlanishga intilaman.</p>
+        </div>
+
+        <a href="{% url 'home' %}" class="btn btn-outline-light btn-back">← Bosh sahifaga qaytish</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</body>
+</html>
